@@ -4,26 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Timer</title>
-    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="styleThree.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class="container">
-        <img src="public/logo.png" class="logo">
-
+    <div class="container ">
         <div class="content">
-            <p>Tempo para o lançamento:</p>
-            <h1>Estamos <span>preparando </span>o melhor para você</h1>
+            <p></p>
+            <h1>Falta pouco para começar a sua  <span>transição</span> de carreira</h1>
             <div class="launch-time">
                 <div>
                     <p id="dias">00</p>
+                    
                     <span>Dias</span>
                 </div>
                 <div>
-                    <p id="horas">00</p>
+                    <p id="horas">00</p> 
                     <span>horas</span>
                 </div>
                 <div>
-                    <p id="minutos">00</p>
+                    <p id="minutos">00</p> 
                     <span>minutos</span>
                 </div>
                 <div>
@@ -31,44 +30,25 @@
                     <span>segundos</span>
                 </div>
             </div>
-            <button type="button">Saiba mais<img src="public/triangle.png"></button>
+
+            
+            <!-- <button type="button">Saiba mais<img src="public/triangle.png"></button> -->
 
 
         </div>
-        <img src="public/rocket.png" class="rocket">
+        
+        <img src="public/Vector.png" class="timer">
 
     </div>
+    <section>
+        <div class="wave wave1"></div>
+        <div class="wave wave2"></div>
+        <div class="wave wave3"></div>
+        <div class="wave wave4"></div>
+    </section>
 
-    <script>
-        let countDownDate = new Date("Mar 01, 2024 00:00:00").getTime();
-        let x = setInterval(function(){
-            let now = new Date().getTime();
-            const distancia = countDownDate - now;
-            // console.log(distancia, "é a distancia")
-            const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
-            const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
-            const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
-
-            document.getElementById("dias").innerHTML = dias;
-            document.getElementById("horas").innerHTML = horas;
-            document.getElementById("minutos").innerHTML = minutos;
-            document.getElementById("segundos").innerHTML = segundos;
-
-            if(distancia < 0){
-                clearInterval(x)
-                document.getElementById("dias").innerHTML = "00";
-                document.getElementById("horas").innerHTML = "00";
-                document.getElementById("minutos").innerHTML = "00";
-                document.getElementById("segundos").innerHTML = "00";
-
-            }
-
-
-
-            // console.log(days, "é a distancia")
-
-        },1000);
+    <script src="scriptThree.js">
+        
     </script>
     
 </body>
